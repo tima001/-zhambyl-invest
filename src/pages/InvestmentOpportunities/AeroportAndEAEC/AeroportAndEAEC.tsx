@@ -10,13 +10,11 @@ const AeroportAndEAEC = () => {
     const theme = useTheme()
 
 
-
-
     return (
         <Wrapper>
 
             <MaxWidth>
-                <GridBox columns="repeat(2, auto)">
+                <GridBox columns="1fr 1fr">
                     <DisplayFlex color="#F7F7F7" radius="16px" gap="24px" padding="24px 32px" direction="row"
                                  align="center">
                         <IconImg src={AeroportLogo}/>
@@ -37,7 +35,7 @@ const AeroportAndEAEC = () => {
                         <DisplayFlex gap="8px" direction="column" align="start">
                             <TextInfo size="24px" weight={400} align="center">
                                 <TextInfo size="24px" weight={700} align="center">
-                                Свободная торговля
+                                    Свободная торговля
                                 </TextInfo>
                                 в рамках ЕАЭС
                             </TextInfo>
@@ -108,7 +106,7 @@ const DisplayFlex = styled.div<DisplayFlexProps>`
     display: flex;
     gap: ${(props) => props.gap || "none"};
     flex-direction: ${(props) => props.direction || "row"};
-    align-items:  ${(props) => props.align || "center"};
+    align-items: ${(props) => props.align || "center"};
     width: ${(props) => props.width || "auto"};
     justify-content: ${(props) => props.justify || "flex-start"};
     background: ${(props) => props.color || "none"};
@@ -128,9 +126,9 @@ const GridBox = styled.div<GridBoxProps>`
     display: grid;
     grid-template-columns: ${(props) => props.columns || "none"}; /* 2 колонки */
     grid-auto-rows: auto; /* строки автоматически */
-    justify-content:  ${(props) => props.columns || "center"}; /* выравнивание по левому краю */
-    align-content:  ${(props) => props.alignContent || "start"}; /* выравнивание по левому краю */
-    gap: 48px; /* расстояние между элементами */
+    justify-content: ${(props) => props.columns || "center"}; /* выравнивание по левому краю */
+    align-content: ${(props) => props.alignContent || "start"}; /* выравнивание по левому краю */
+    gap: 24px; /* расстояние между элементами */
     height: ${(props) => props.height || "100%"};
     width: 100%;
 `;
